@@ -1,0 +1,176 @@
+//Colors
+$primary-color: #07a2d6;
+$secondary-color: #f7f7f7;
+$text-color: #040404;
+
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend Deca", serif;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+header {
+  nav {
+    .nav-link {
+      text-transform: uppercase;
+      font-size: 1em;
+      color: $text-color;
+      font-weight: 500;
+    }
+
+    .brand {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+}
+
+main {
+  .section-1 {
+    .hero {
+      background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+        url(../img/hero11.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 550px;
+      background-color: rgb(0, 0, 0, 255);
+      color: $secondary-color;
+
+      span {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.section-3 {
+  .item {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .service-body {
+        transform: translateY(0%);
+        .service-content {
+          opacity: 1;
+        }
+      }
+    }
+    .service-image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        border-radius: 40px;
+        aspect-ratio: 1 / 1.2;
+        object-fit: cover;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(217, 217, 217, 0) 0%,
+          rgba(217, 217, 217, 0) 13.02%,
+          rgba(0, 0, 0, 0.51) 42.5%,
+          rgba(0, 0, 0, 0.63) 70%,
+          #000000 100%
+        );
+      }
+    }
+
+    .service-body {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      transform: translateY(80%);
+      transition: all 0.4s ease-in;
+      color: var(--secondary-color);
+
+      .service-content {
+        transition: all 0.4s ease-in;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.section-5 {
+  .swiper {
+    padding: 25px;
+  }
+  .card {
+    border-radius: 40px;
+    .card-body {
+      .rating {
+        color: $primary-color;
+      }
+      .content {
+        p {
+          font-size: 1em;
+        }
+      }
+      meta {
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .name {
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.section-6 {
+  .card {
+    border-radius: 40px;
+    img {
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    .card-body {
+      a .title {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+.section-9 {
+  .card {
+    border-radius: 40px;
+    .card-body {
+      border-radius: 20px;
+    }
+  }
+}
